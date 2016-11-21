@@ -1,0 +1,11 @@
+{
+  "name": "secret_santa",
+  "version": "0.0.0",
+  "description": "simple secret santa. scramble up a list of participants and send out emails to each participant",
+  "main": "index.js",
+  "repository": "",
+  "author": "Shon Diaz <shondiaz@gmail.com>",
+  "dependencies": {
+    "mailgun-js": "*",
+  }
+}
