@@ -1,6 +1,10 @@
 "use strict";
 
-var secretSanta = require('../index.js');
+let secretSanta = null;
+
+// note: if running from repo
+try {secretSanta = require('../');}
+catch (_) {secretSanta = require('secret_santa');}
 
 main(process.argv.splice(2));
 
@@ -21,7 +25,7 @@ function main(args){
                     console.log(JSON.stringify(data, null, ' '));
                     
                     callback(null, {ok:true});
-                }
+                };
                 
                 return this;
             }
@@ -35,7 +39,7 @@ function main(args){
             .then(function(){
                 secretSanta.send(imposterMailMan);
             })
-            .catch(console.error)
+            .catch(console.error);
     else
         console.warn(`there are no participants in ${participantFile}`, 'try using ./ (dot slash to target with relative paths)');
 }

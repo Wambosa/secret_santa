@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "description": "simple secret santa. scramble up a list of participants and send out emails to each participant",
   "main": "index.js",
-  "repository": "",
+  "repository": "https://github.com/Wambosa/secret_santa",
   "author": "Shon Diaz <shondiaz@gmail.com>",
-  "dependencies": {
-    "mailgun-js": "*",
+  "devDependencies": {
+    "mailgun-js": "*"
   }
 }
