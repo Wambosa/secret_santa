@@ -32,7 +32,6 @@ _putting in your real list of people_
 ----------
 
 ## future
-- reimplement _easy rigger_
 - we typically dont want suggestions to be included, (because it cheapens the quest) however it might be a cool feature
 
 

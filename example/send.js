@@ -16,9 +16,14 @@ function main(args) {
 	} catch(err) {
 		console.error(`there are no participants in ${participantFile} or the path to file is wrong`)
 		console.error(err)
+		process.exit(1)
 	}
 
-	if(!isDryRun)
+	if(isDryRun)
+		secretSanta.configure({
+			mailer: require('../lib/fakeMailer')
+		})
+	else
 		secretSanta.configure({
 			senderName: "Some Elf",
 			senderAddress: "secret_santa@customtaxapp.com",
@@ -27,11 +32,6 @@ function main(args) {
 				apiKey: apiKey, 
 				domain: domain
 			})
-		})
-	else
-		secretSanta.configure({
-			subject: "Secret Santa -- Dry Run",
-			mailer: require('../lib/fakeMailer')
 		})
 
 	secretSanta.assignBenefactors(participants)
