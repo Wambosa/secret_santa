@@ -18,6 +18,16 @@ function shuffle(list_) {
 	return list
 }
 
+Array.prototype.next = function(not) {
+
+	let name = this.find((v, i) => {
+		if(!not.includes(v))
+			return this.splice(i, 1)
+	})
+
+	return name
+}
+
 module.exports = {
 	configure: function(options) {
 		this.senderName = options.senderName
@@ -29,11 +39,12 @@ module.exports = {
 	},
 
 	assignBenefactors: function(participants) {
-		let self = this;
+		let self = this
 		let names = shuffle(participants.map(p => p.name))
 
-		return participants.map(p => {
-			p.benefactor = names.pop()
+		return participants.sort((a, b) => a.not.length < b.not.length)
+		.map(p => {
+			p.benefactor = names.next(p.not.concat(p.name))
 			self.participants.push(p)
 			return p
 		})
