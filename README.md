@@ -31,8 +31,5 @@ _putting in your real list of people_
 
 ----------
 
-## future
-- we typically dont want suggestions to be included, (because it cheapens the quest) however it might be a cool feature
-
 
 [mailgun link]: https://mailgun.com/app/domains

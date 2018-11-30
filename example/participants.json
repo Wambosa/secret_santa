@@ -2,41 +2,49 @@
   {
     "name": "James", 
     "email": "james@gmail.com",
+    "likes": "enjoys golfing and working overtime",
     "not": ["Kelly"]
   },
   {
     "name": "Denise", 
     "email": "denise@gmail.com",
+    "likes": "likes to sue employers and dig for golds",
     "not": []
   },
   {
     "name": "Jack", 
     "email": "jack@gmail.com",
+    "likes": "perfers not to get or give gifts",
     "not": []
   },
   {
     "name": "Kelly", 
     "email": "kelly@gmail.com",
+    "likes": "needs a way to grow 6 more arms for her 3 toddlers",
     "not": []
   },
   {
     "name": "Ted", 
     "email": "ted@gmail.com",
+    "likes": "seems to talk alot over the world wide web",
     "not": []
   },
   {
     "name": "Nikki", 
     "email": "nikki@gmail.com",
+    "likes": "keeps on breaking her pencils when she draws",
     "not": []
   },
   {
     "name": "Lauren", 
     "email": "lauren@gmail.com",
+    "likes": "stores all her thoughts in a code journal",
     "not": []
   },
   {
     "name": "Heather", 
     "email": "heather@gmail.com",
+    "likes": "is an excellent cook with old cracked pans",
     "not": []
   }
 ]
