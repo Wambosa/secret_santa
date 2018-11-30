@@ -17,13 +17,20 @@ class SecretSanta {
     while(working) {
       this.cycles++
       let niceList = shuffle(persons)
-      this.participants = persons.sort((a, b) => a.not.length < b.not.length)
-        .map(p => {
-          p.benefactor = niceList.next(p.not.concat(p.name))
-          return p
-        })
+      this.participants = persons.map(p => {
+        p.benefactor = niceList.next(p.not.concat(p.name))
+        return p
+      })
 
-      working = this.participants.find(p => !p.benefactor)
+      working = this.participants.find(p => {
+        //1. do i have somebody to give to?
+        if(!p.benefactor)
+          return true
+
+        //2. make sure the person i am giving to does not have me
+        let benefactor = this.participants.find(b => p.benefactor.name === b.name).benefactor
+        return benefactor && p.benefactor.name === benefactor.name
+      })
     }
   }
 
@@ -44,7 +51,7 @@ class SecretSanta {
       })
     })
 
-    console.log(`send complete with ${this.cycles} cycles`)
+    console.log(`send complete with ${this.cycles} shuffle cycles`)
   }
 
 }
