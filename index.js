@@ -66,7 +66,7 @@ function say(participant) {
 
     ${receiver.name} is on the nice list!
     ${receiver.name} ${receiver.likes}.
-    You are their Secret Santa, make sure to get them a gift!
+    You are ${receiver.name}'s Secret Santa, make sure to get ${receiver.name} a gift!
   `
 }
 
